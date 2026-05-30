@@ -48,13 +48,19 @@
                 <h1 class="fw-bold">Torres Cabezas Yober Luis</h1>
                 <h4 class="text-gris fw-bold mb-4">Estudiante de 5to ciclo de Ingenieria en Tecnologias de la información</h4>
                 <p class="fs-5">
-                    Soy de los que prefieren "meter mano" configurando en Wireshark antes que leer mil PDFs de teoría. 
-                    Actualmente me enfoco en ciberseguridad y análisis de redes. Mi norte es llegar a un <strong>SOC</strong> y, a futuro, dar el salto a la <strong>Informática Forense (DFIR)</strong>.
+                    Generalmente, tengo mucha curiosidad sobre temas relacionados
+                    con ciberseguridad y hacking ético, los cuales aprendo de manera 
+                    autodidacta, usando plataformas y laboratorios virtuales en entornos 
+                    controlados. Me gusta mucho el trabajo práctico, como el mantenimiento 
+                    de equipos informáticos y cableado estructurado, me he desempeñado 
+                    como técnico de soporte, mantenimiento e instalación de redes FTTH. 
+                    Mi meta es llegar a un <strong> SOC </strong> y, a futuro, dar el salto a la <strong>informática 
+                    forense.</strong>
                 </p>
             </div>
         </div>
 
-        <h2 class="text-center fw-bold mb-4">Mis Intereses</h2>
+        <h2 class="text-center fw-bold mb-4">Mis hobbies e intereses</h2>
         <div class="row g-4 text-center">
             
             <div class="col-md-4">
