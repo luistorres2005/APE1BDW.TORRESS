@@ -1,6 +1,6 @@
 <?php
+session_start(); // Agregamos session_start() para poder usar $_SESSION
 require_once("conexion.php");
-$alerta = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sanitización básica de los datos recibidos 
@@ -16,14 +16,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("sss", $nombre, $correo, $mensaje);
         
         if ($stmt->execute()) {
-            $alerta = "<div class='alert alert-success text-center'>¡Mensaje enviado con éxito! Lo revisaré pronto en mi panel.</div>";
+            $_SESSION['alerta_contacto'] = "<div class='alert alert-success text-center'>¡Mensaje enviado con éxito! Lo revisaré pronto en mi panel.</div>";
         } else {
-            $alerta = "<div class='alert alert-danger text-center'>Hubo un error de conexión al enviar el mensaje.</div>";
+            $_SESSION['alerta_contacto'] = "<div class='alert alert-danger text-center'>Hubo un error de conexión al enviar el mensaje.</div>";
         }
         $stmt->close();
     } else {
-        $alerta = "<div class='alert alert-warning text-center'>Por favor, completa todos los campos con un formato válido.</div>";
+        $_SESSION['alerta_contacto'] = "<div class='alert alert-warning text-center'>Por favor, completa todos los campos con un formato válido.</div>";
     }
+    
+    // Redirección a la misma página para limpiar la petición POST
+    header("Location: contacto.php");
+    exit;
 }
 ?>
 
@@ -32,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Mi Portafolio</title>
+    <title>Contacto - Mi portafolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         
@@ -59,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <header>
         <nav class="navbar navbar-expand-lg bg-navy py-3 shadow">
             <div class="container">
-                <a class="navbar-brand fw-bold text-light-gray" href="index.php">Mi Portafolio</a>
+                <a class="navbar-brand fw-bold text-light-gray" href="index.php">MI PORTAFOLIO</a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
                 </button>
@@ -84,7 +88,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div class="card-body px-5 pb-5 pt-4">
                         
-                        <?= $alerta ?>
+                        <?php if (isset($_SESSION['alerta_contacto'])): ?>
+                            <?= $_SESSION['alerta_contacto'] ?>
+                            <?php unset($_SESSION['alerta_contacto']);  ?>
+                        <?php endif; ?>
 
                         <form method="POST" action="contacto.php">
                             <div class="mb-4">
@@ -109,7 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <footer class="bg-navy text-center py-4 mt-auto">
         <div class="container">
-            <p class="mb-0 text-light-gray">&copy; 2026 - Mi Portafolio Personal. Desarrollado con HTML5, PHP y Bootstrap.</p>
+            <p class="mb-0 text-light-gray">&copy; 2026 - Yober Luis Torres Cabezas</p>
         </div>
     </footer>
 

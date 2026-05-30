@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Mi Portafolio Personal</title>
+    <title>Inicio - Mi portafolio personal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
 
         body { background-color: #f8f9fa; color: #000000; } 
         .bg-navy { background-color: #031926; } 
-        .text-gris { color: #62686e; } 
+        .text-gris { color: #62686e; }
+        .text-negro { color: #000000 !important; }         
         .card-custom { background-color: #9DBEBB; border: none; border-radius: 1rem; color: #000000; }
         .foto-borde { border: 5px solid #545b62; }         
         
         .nav-link { color: #ffffff !important; } 
         .nav-link:hover { color: #ffffff !important; } 
         .text-light-gray { color: #ffffff; }
+        
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
 
     <nav class="navbar navbar-expand-lg bg-navy py-3 shadow">
         <div class="container">
-            <a class="navbar-brand fw-bold text-light-gray" href="index.php">Mi Portafolio</a>
+            <a class="navbar-brand fw-bold text-light-gray" href="index.php">MI PORTAFOLIO</a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
             </button>
@@ -43,8 +45,8 @@
                 <img src="img/perfil_2x2.jpg" alt="Perfil" class="img-fluid rounded-circle shadow-lg foto-borde" style="max-width: 250px;">
             </div>
             <div class="col-md-8">
-                <h1 class="fw-bold">¡Hola! Bienvenido a mi web</h1>
-                <h4 class="text-gris fw-bold mb-4">Estudiante de TI enfocado en la práctica</h4>
+                <h1 class="fw-bold">Torres Cabezas Yober Luis</h1>
+                <h4 class="text-gris fw-bold mb-4">Estudiante de 5to ciclo de Ingenieria en Tecnologias de la información</h4>
                 <p class="fs-5">
                     Soy de los que prefieren "meter mano" configurando en Wireshark antes que leer mil PDFs de teoría. 
                     Actualmente me enfoco en ciberseguridad y análisis de redes. Mi norte es llegar a un <strong>SOC</strong> y, a futuro, dar el salto a la <strong>Informática Forense (DFIR)</strong>.

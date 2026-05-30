@@ -55,7 +55,7 @@ $resultado = $conexion->query($query);
                     <th scope="col" class="py-3">Nombre</th>
                     <th scope="col" class="py-3">Correo</th>
                     <th scope="col" class="py-3">Mensaje</th>
-                    <th scope="col" class="py-3">Fecha y Hora</th>
+                    <th scope="col" class="py-3">Fecha y hora</th>
                 </tr>
             </thead>
             <tbody>
