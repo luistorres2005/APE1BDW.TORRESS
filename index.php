@@ -42,7 +42,7 @@
         
         <div class="row align-items-center mb-5">
             <div class="col-md-4 text-center mb-4 mb-md-0">
-                <img src="img/perfil_2x2.jpg" alt="Perfil" class="img-fluid rounded-circle shadow-lg foto-borde" style="max-width: 250px;">
+                <img src="img/FotoDePerfil .png" alt="Perfil" class="img-fluid rounded-circle shadow-lg foto-borde" style="max-width: 250px;">
             </div>
             <div class="col-md-8">
                 <h1 class="fw-bold">Torres Cabezas Yober Luis</h1>
