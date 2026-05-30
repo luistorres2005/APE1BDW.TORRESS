@@ -5,98 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Mi Portafolio Personal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light text-dark">
-
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="index.php">Mi Portafolio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="index.php">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link text-warning" href="login.php">Admin</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="container mt-5">
+    <style>
+        /* Paleta base conservada, tipografía ajustada a escala de grises y negros */
+        body { background-color: #f8f9fa; color: #000000; } /* Fondo champaña, texto casi negro */
+        .bg-navy { background-color: #031926; } 
+        .text-gris { color: #62686e; } /* Gris medio y elegante para subtítulos */
+        .card-custom { background-color: #9DBEBB; border: none; border-radius: 1rem; color: #000000; }
+        .foto-borde { border: 5px solid #545b62; } /* Borde de foto gris haciendo juego */
         
-        <section id="sobre-mi" class="row align-items-center mb-5 bg-white p-4 rounded shadow-sm">
+        /* Textos sobre fondo oscuro (Navbar y Footer) */
+        .nav-link { color: #ffffff !important; } /* Gris claro para el navbar oscuro */
+        .nav-link:hover { color: #ffffff !important; } /* Blanco puro al pasar el mouse */
+        .text-light-gray { color: #ffffff; }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg bg-navy py-3 shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-light-gray" href="index.php">Mi Portafolio</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="login.php">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5 mb-5 flex-grow-1">
+        
+        <div class="row align-items-center mb-5">
             <div class="col-md-4 text-center mb-4 mb-md-0">
-                <img src="img/perfil_2x2.jpg" alt="Mi foto de perfil" class="img-fluid rounded shadow" style="width: 250px; height: 250px; object-fit: cover;">
+                <img src="img/perfil_2x2.jpg" alt="Perfil" class="img-fluid rounded-circle shadow-lg foto-borde" style="max-width: 250px;">
             </div>
             <div class="col-md-8">
-                <h1 class="fw-bold">¡Hola! Bienvenido a mi sitio web</h1>
-                <p class="lead text-muted">Estudiante de Tecnologías de la Información desde Shushufindi.</p>
-                <p>
-                    Me considero una persona práctica, orientada a la ejecución técnica más que a la teoría pura. 
-                    Actualmente estoy enfocando mis estudios en el área de la ciberseguridad y el análisis de redes. 
-                    Mi objetivo profesional a mediano plazo es integrarme a un <strong>Security Operations Center (SOC)</strong>, 
-                    para luego dar el salto hacia la <strong>Informática Forense (DFIR)</strong>. 
-                </p>
-                <p>
-                    Me gusta resolver problemas desarrollando sistemas web seguros y gestionando bases de datos relacionales, 
-                    siempre buscando mejorar mis hábitos de estudio y evitar la procrastinación para lograr mis metas.
+                <h1 class="fw-bold">¡Hola! Bienvenido a mi web</h1>
+                <h4 class="text-gris fw-bold mb-4">Estudiante de TI enfocado en la práctica</h4>
+                <p class="fs-5">
+                    Soy de los que prefieren "meter mano" configurando en Wireshark antes que leer mil PDFs de teoría. 
+                    Actualmente me enfoco en ciberseguridad y análisis de redes. Mi norte es llegar a un <strong>SOC</strong> y, a futuro, dar el salto a la <strong>Informática Forense (DFIR)</strong>.
                 </p>
             </div>
-        </section>
+        </div>
 
-        <section id="hobbies" class="mb-5">
-            <h2 class="text-center fw-bold mb-4">Mis Hobbies e Intereses</h2>
-            <div class="row g-4">
-                
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <h3 class="card-title fs-1">🛡️</h3>
-                            <h5 class="card-title fw-bold">Ciberseguridad Práctica</h5>
-                            <p class="card-text">
-                                Dedico mi tiempo libre a resolver retos en plataformas como TryHackMe y comprender vectores de ataque como la ingeniería social, el phishing y los ataques de fuerza bruta.
-                            </p>
-                        </div>
-                    </div>
+        <h2 class="text-center fw-bold mb-4">Mis Intereses</h2>
+        <div class="row g-4 text-center">
+            
+            <div class="col-md-4">
+                <div class="card card-custom h-100 p-4 shadow-sm transition">
+                    <h1 class="display-4">🛡️</h1>
+                    <h5 class="fw-bold mt-2">Ciberseguridad</h5>
+                    <p class="mb-0">Resolviendo retos en TryHackMe y estudiando vectores de ataque, desde phishing hasta fuerza bruta.</p>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <h3 class="card-title fs-1">📡</h3>
-                            <h5 class="card-title fw-bold">Análisis de Redes</h5>
-                            <p class="card-text">
-                                Me apasiona capturar y analizar tráfico. Utilizo herramientas prácticas como Wireshark y Nmap para entender a fondo cómo se comunican los sistemas y detectar anomalías.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <h3 class="card-title fs-1">💻</h3>
-                            <h5 class="card-title fw-bold">Desarrollo Web y BD</h5>
-                            <p class="card-text">
-                                Construyo sistemas de autenticación y gestiono bases de datos MySQL, materializando tablas e implementando fuertes controles de acceso y seguridad.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </section>
 
+            <div class="col-md-4">
+                <div class="card card-custom h-100 p-4 shadow-sm">
+                    <h1 class="display-4">📡</h1>
+                    <h5 class="fw-bold mt-2">Análisis de Redes</h5>
+                    <p class="mb-0">Capturando tráfico para entender realmente cómo se comunican los sistemas por debajo de la mesa.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-custom h-100 p-4 shadow-sm">
+                    <h1 class="display-4">💻</h1>
+                    <h5 class="fw-bold mt-2">Desarrollo Web</h5>
+                    <p class="mb-0">Armando sistemas de login con contraseñas seguras y maquetando bases de datos bien estructuradas.</p>
+                </div>
+            </div>
+
+        </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-4 mt-auto">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 - Mi Portafolio Personal. Desarrollado con HTML5, PHP y Bootstrap.</p>
-        </div>
+    <footer class="bg-navy text-center py-4 mt-auto">
+        <p class="mb-0 text-light-gray">&copy; 2026 - Yober Luis Torres Cabezas</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
