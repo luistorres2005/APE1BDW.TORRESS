@@ -6,16 +6,15 @@
     <title>Inicio - Mi Portafolio Personal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Paleta base conservada, tipografía ajustada a escala de grises y negros */
-        body { background-color: #f8f9fa; color: #000000; } /* Fondo champaña, texto casi negro */
+
+        body { background-color: #f8f9fa; color: #000000; } 
         .bg-navy { background-color: #031926; } 
-        .text-gris { color: #62686e; } /* Gris medio y elegante para subtítulos */
+        .text-gris { color: #62686e; } 
         .card-custom { background-color: #9DBEBB; border: none; border-radius: 1rem; color: #000000; }
-        .foto-borde { border: 5px solid #545b62; } /* Borde de foto gris haciendo juego */
+        .foto-borde { border: 5px solid #545b62; }         
         
-        /* Textos sobre fondo oscuro (Navbar y Footer) */
-        .nav-link { color: #ffffff !important; } /* Gris claro para el navbar oscuro */
-        .nav-link:hover { color: #ffffff !important; } /* Blanco puro al pasar el mouse */
+        .nav-link { color: #ffffff !important; } 
+        .nav-link:hover { color: #ffffff !important; } 
         .text-light-gray { color: #ffffff; }
     </style>
 </head>

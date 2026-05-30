@@ -19,36 +19,43 @@ $resultado = $conexion->query($query);
     <meta charset="UTF-8">
     <title>Panel Admin - Catálogo de Mensajes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>        
+        .bg-navy { background-color: #031926; } 
+        .text-gris { color: #62686e; }         
+        
+        .text-light-gray { color: #ffffff; }
+        .table-navy th { background-color: #031926; color: #ffffff; border-color: #031926; }
+    </style>
 </head>
-<body class="bg-light d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg bg-navy py-3 shadow">
     <div class="container">
-        <span class="navbar-brand">Panel de Administración</span>
+        <span class="navbar-brand fw-bold text-light-gray">Panel de Administración</span>
         <div class="d-flex">
-            <a href="index.php" target="_blank" class="btn btn-outline-info me-2">Ver mi Web</a>
-            <a href="logout.php" class="btn btn-danger">Cerrar Sesión</a>
+            <a href="index.php" target="_blank" class="btn btn-outline-light me-2 fw-bold">Ver mi Web</a>
+            <a href="logout.php" class="btn btn-danger fw-bold">Cerrar Sesión</a>
         </div>
     </div>
 </nav>
 
-<div class="container mt-4">
-    <div class="alert alert-primary shadow-sm">
-        <h4 class="mb-0">¡Bienvenido al panel, <?= htmlspecialchars($_SESSION['nombre'], ENT_QUOTES, 'UTF-8') ?>!</h4>
-        <p class="mb-0">Aquí puedes gestionar y leer todos los mensajes que te envían desde tu sitio web.</p>
+<div class="container mt-4 flex-grow-1">
+    <div class="alert bg-white shadow-sm border-0 py-3">
+        <h4 class="mb-1 fw-bold">¡Bienvenido al panel, <?= htmlspecialchars($_SESSION['nombre'], ENT_QUOTES, 'UTF-8') ?>!</h4>
+        <p class="mb-0 text-gris">Aquí puedes gestionar y leer todos los mensajes que te envían desde tu sitio web.</p>
     </div>
 
-    <h3 class="mt-5 mb-3 border-bottom pb-2">Bandeja de Entrada (Catálogo Dinámico)</h3>
+    <h3 class="mt-5 mb-3 border-bottom pb-2 fw-bold">Bandeja de Entrada</h3>
     
     <div class="table-responsive bg-white p-3 rounded shadow-sm mb-5">
-        <table class="table table-hover align-middle">
-            <thead class="table-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Correo</th>
-                    <th scope="col">Mensaje</th>
-                    <th scope="col">Fecha y Hora</th>
+        <table class="table table-hover align-middle mb-0">
+            <thead>
+                <tr class="table-navy">
+                    <th scope="col" class="py-3">#</th>
+                    <th scope="col" class="py-3">Nombre</th>
+                    <th scope="col" class="py-3">Correo</th>
+                    <th scope="col" class="py-3">Mensaje</th>
+                    <th scope="col" class="py-3">Fecha y Hora</th>
                 </tr>
             </thead>
             <tbody>
@@ -56,17 +63,17 @@ $resultado = $conexion->query($query);
                     <?php while($fila = $resultado->fetch_assoc()): ?>
                         <tr>
                             <td class="fw-bold"><?= htmlspecialchars($fila['id']) ?></td>
-                            <td><?= htmlspecialchars($fila['nombre'], ENT_QUOTES, 'UTF-8') ?></td>
-                            <td><a href="mailto:<?= htmlspecialchars($fila['correo']) ?>"><?= htmlspecialchars($fila['correo'], ENT_QUOTES, 'UTF-8') ?></a></td>
+                            <td class="fw-bold"><?= htmlspecialchars($fila['nombre'], ENT_QUOTES, 'UTF-8') ?></td>
+                            <td><a href="mailto:<?= htmlspecialchars($fila['correo']) ?>" class="text-decoration-none text-dark fw-semibold"><?= htmlspecialchars($fila['correo'], ENT_QUOTES, 'UTF-8') ?></a></td>
                             <td style="max-width: 300px; word-wrap: break-word;">
                                 <?= nl2br(htmlspecialchars($fila['mensaje'], ENT_QUOTES, 'UTF-8')) ?>
                             </td>
-                            <td class="text-muted"><?= htmlspecialchars($fila['fecha_envio']) ?></td>
+                            <td class="text-gris small fw-semibold"><?= htmlspecialchars($fila['fecha_envio']) ?></td>
                         </tr>
                     <?php endwhile; ?>
                 <?php else: ?>
                     <tr>
-                        <td colspan="5" class="text-center text-muted py-4">Aún no tienes mensajes en tu bandeja.</td>
+                        <td colspan="5" class="text-center text-gris py-5">Aún no tienes mensajes en tu bandeja.</td>
                     </tr>
                 <?php endif; ?>
             </tbody>
@@ -75,9 +82,9 @@ $resultado = $conexion->query($query);
 
 </div>
 
-<footer class="bg-dark text-white text-center py-3 mt-auto">
+<footer class="bg-navy text-center py-4 mt-auto">
     <div class="container">
-        <small>&copy; 2026 - yltorres3 - Torres Cabezas Yober Luis</small>
+        <p class="mb-0 text-light-gray">&copy; 2026 - Yober Luis Torres Cabezas</p>
     </div>
 </footer>
 
