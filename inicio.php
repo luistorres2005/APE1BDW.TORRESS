@@ -8,7 +8,7 @@ if (!isset($_SESSION['usuario_id'])) {
     exit;
 }
 
-// Consultar los mensajes recibidos, ordenados por fecha descendente
+// Consultar los mensajes recibidos
 $query = "SELECT id, nombre, correo, mensaje, fecha_envio FROM mensajes ORDER BY fecha_envio DESC";
 $resultado = $conexion->query($query);
 ?>
@@ -17,7 +17,7 @@ $resultado = $conexion->query($query);
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Panel Admin - Catálogo de Mensajes</title>
+    <title>Panel admin - Mensajes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>        
         .bg-navy { background-color: #031926; } 
@@ -31,10 +31,10 @@ $resultado = $conexion->query($query);
 
 <nav class="navbar navbar-expand-lg bg-navy py-3 shadow">
     <div class="container">
-        <span class="navbar-brand fw-bold text-light-gray">Panel de Administración</span>
+        <span class="navbar-brand fw-bold text-light-gray">Panel de administración</span>
         <div class="d-flex">
-            <a href="index.php" target="_blank" class="btn btn-outline-light me-2 fw-bold">Ver mi Web</a>
-            <a href="logout.php" class="btn btn-danger fw-bold">Cerrar Sesión</a>
+            <a href="index.php" target="_blank" class="btn btn-outline-light me-2 fw-bold">Ver mi web</a>
+            <a href="logout.php" class="btn btn-danger fw-bold">Cerrar sesión</a>
         </div>
     </div>
 </nav>
@@ -45,7 +45,7 @@ $resultado = $conexion->query($query);
         <p class="mb-0 text-gris">Aquí puedes gestionar y leer todos los mensajes que te envían desde tu sitio web.</p>
     </div>
 
-    <h3 class="mt-5 mb-3 border-bottom pb-2 fw-bold">Bandeja de Entrada</h3>
+    <h3 class="mt-5 mb-3 border-bottom pb-2 fw-bold">Bandeja de entrada</h3>
     
     <div class="table-responsive bg-white p-3 rounded shadow-sm mb-5">
         <table class="table table-hover align-middle mb-0">
