@@ -1,9 +1,9 @@
 <?php
 // Variables de configuración de la base de datos
-$servidor = "localhost";
-$usuario = "root";
-$contrasena = "";
-$basedatos = "APE1B_TORRESS";
+$servidor = "sql113.infinityfree.com";
+$usuario = "if0_42058423";
+$contrasena = "TC81qZD81xqsHJ";
+$basedatos = "if0_42058423_ape1b_torress";
 
 // Crear conexión con MySQLi
 $conexion = new mysqli($servidor, $usuario, $contrasena, $basedatos);
