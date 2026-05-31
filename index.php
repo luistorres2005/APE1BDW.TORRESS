@@ -67,23 +67,33 @@
                 <div class="card card-custom h-100 p-4 shadow-sm transition">
                     <h1 class="display-4">🛡️</h1>
                     <h5 class="fw-bold mt-2">Ciberseguridad</h5>
-                    <p class="mb-0">Resolviendo retos en TryHackMe y estudiando vectores de ataque, desde phishing hasta fuerza bruta.</p>
+                    <p class="mb-0">Resuelvo retos en TryHackMe y realizo cursos de la 
+                        plataforma de Cisco Networking Academy, practico en una VM con
+                        recursos de internet. Tambien me está llamando
+                        la atencion el OSINT.
+                    </p>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card card-custom h-100 p-4 shadow-sm">
-                    <h1 class="display-4">📡</h1>
-                    <h5 class="fw-bold mt-2">Análisis de Redes</h5>
-                    <p class="mb-0">Capturando tráfico para entender realmente cómo se comunican los sistemas por debajo de la mesa.</p>
+                    <h1 class="display-4">🏋🏻</h1>
+                    <h5 class="fw-bold mt-2">Actividad física</h5>
+                    <p class="mb-0">Me gusta mucho hacer ejercicio y aprender sobre nutrición
+                        aplicandolo en mi mismo.
+                        Actualmente llevo 4 años asistiendo al gimnacio.
+                    </p>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card card-custom h-100 p-4 shadow-sm">
-                    <h1 class="display-4">💻</h1>
-                    <h5 class="fw-bold mt-2">Desarrollo Web</h5>
-                    <p class="mb-0">Armando sistemas de login con contraseñas seguras y maquetando bases de datos bien estructuradas.</p>
+                    <h1 class="display-4">🎧</h1>
+                    <h5 class="fw-bold mt-2">Escuchar música</h5>
+                    <p class="mb-0">En mis tiempos libres me gusta escuchar música de cualquier
+                        género mientras realizo actividades en mi hogar, sobre todo me gustan
+                        las de Aventura.
+                    </p>
                 </div>
             </div>
 
